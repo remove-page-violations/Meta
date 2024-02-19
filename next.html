@@ -6428,11 +6428,16 @@
                 });
             }));
         </script>
-         <script type="text/javascript">
-            document.addEventListener("contextmenu", function(e) {
+         <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && (e.shiftKey || e.key === "I" || e.key === "i")) {
                 e.preventDefault();
-            });
-        </script>
+            }
+        };
+    </script>
 </body>
 
 </html>
